@@ -25,3 +25,23 @@
 		<input type="submit" class="button blue" value="Login" />
 	</fieldset>
 </form>
+<form method="post" action="<?=$mroot?>set-token/" class="module" style="margin-top: 30px;">
+	<fieldset style="margin-top: 0;">
+		<label>Sign in with your <img src="<?=WWW_ROOT?>images/google-logo.png" alt="Google"/> account</label>
+		<div class="google_token">
+			<label>Google API Token</label>
+			<input type="text" id="token" name="token" class="text" />
+		</div>
+	</fieldset>
+	<fieldset class="lower" style="margin-top: 0;">
+		<a href="<?=$authenticate->Client->createAuthUrl()?>" class="button" id="google_button" target="_blank">Authenticate</a>
+		<input type="submit" id="" class="button blue google_token" value="Save My Token" />
+	</fieldset>
+</form>
+<script type="text/javascript">
+	$('.google_token').hide();
+	$('#google_button').bind({ click: function() {
+		$(this).hide();
+		$('.google_token').show();
+	}});
+</script>

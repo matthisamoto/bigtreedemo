@@ -4392,6 +4392,46 @@
 				return false;
 			}
 		}
+		
+		/*
+			Function: loginWithGoogle
+				Attempts to login a user to the CMS via a Google account
+
+			Parameters:
+				email - The email address of the user.
+				password - The password of the user.
+				stay_logged_in - Whether to set a cookie to keep the user logged in.
+
+			Returns:
+				false if login failed, otherwise redirects back to the page the person requested.
+		*/
+
+		function loginWithGoogle($email,$password,$stay_logged_in = false) {
+			global $path;
+			$f = sqlfetch(sqlquery("SELECT * FROM bigtree_users WHERE email = '".sqlescape($email)."'"));
+			$phpass = new PasswordHash($bigtree["config"]["password_depth"], TRUE);
+			$ok = $phpass->CheckPassword($password,$f["password"]);
+			if ($ok) {
+				if ($stay_logged_in) {
+					setcookie('bigtree_admin[email]',$f["email"],time()+31*60*60*24,str_replace(DOMAIN,"",WWW_ROOT));
+					setcookie('bigtree_admin[password]',$f["password"],time()+31*60*60*24,str_replace(DOMAIN,"",WWW_ROOT));
+				}
+
+				$_SESSION["bigtree_admin"]["id"] = $f["id"];
+				$_SESSION["bigtree_admin"]["email"] = $f["email"];
+				$_SESSION["bigtree_admin"]["level"] = $f["level"];
+				$_SESSION["bigtree_admin"]["name"] = $f["name"];
+				$_SESSION["bigtree_admin"]["permissions"] = json_decode($f["permissions"],true);
+				
+				if (isset($_SESSION["bigtree_login_redirect"])) {
+					BigTree::redirect($_SESSION["bigtree_login_redirect"]);
+				} else {
+					BigTree::redirect(ADMIN_ROOT);
+				}
+			} else {
+				return false;
+			}
+		}
 
 		/*
 			Function: logout

@@ -62,6 +62,7 @@
 		"BigTreeAutoModule" => "inc/bigtree/auto-modules.php",
 		"BigTreeForms" => "inc/bigtree/forms.php",
 		"BigTreeGoogleAnalytics" => "inc/bigtree/google-analytics.php",
+		"BigTreeGoogleAuth" => "inc/bigtree/google-authenticate.php",
 		"BigTreeModule" => "inc/bigtree/modules.php",
 		"BigTreePaymentGateway" => "inc/bigtree/payment-gateway.php",
 		"BigTreeUploadService" => "inc/bigtree/upload-service.php",
