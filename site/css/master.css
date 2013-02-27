@@ -1,0 +1,422 @@
+/*-----------------------------------------------------------------------------------
+  Global Reset <http://meyerweb.com/eric/tools/css/reset/> v2.0 | 20110126
+-----------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { border: 0; font: inherit; font-size: 100%; margin: 0; outline: 0; padding: 0; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+:focus { outline: 0; }
+
+button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner { border: 0; margin: 0; padding: 0; }
+
+/*---------------------------
+  Fonts
+---------------------------*/
+@font-face {
+	font-family: 'GentiumBookBasic';
+	src: url('static_root/fonts/genbkbasr-webfont.eot');
+	src: url('static_root/fonts/genbkbasr-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('static_root/fonts/genbkbasr-webfont.woff') format('woff'),
+		 url('static_root/fonts/genbkbasr-webfont.ttf') format('truetype'),
+		 url('static_root/fonts/genbkbasr-webfont.svg#GentiumBookBasicRegular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('static_root/fonts/opensans-regular-webfont.eot');
+	src: url('static_root/fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('static_root/fonts/opensans-regular-webfont.woff') format('woff'),
+		 url('static_root/fonts/opensans-regular-webfont.ttf') format('truetype'),
+		 url('static_root/fonts/opensans-regular-webfont.svg#OpenSansRegular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('static_root/fonts/opensans-bold-webfont.eot');
+	src: url('static_root/fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('static_root/fonts/opensans-bold-webfont.woff') format('woff'),
+		 url('static_root/fonts/opensans-bold-webfont.ttf') format('truetype'),
+		 url('static_root/fonts/opensans-bold-webfont.svg#OpenSansBold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('static_root/fonts/opensans-extrabold-webfont.eot');
+	src: url('static_root/fonts/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('static_root/fonts/opensans-extrabold-webfont.woff') format('woff'),
+		 url('static_root/fonts/opensans-extrabold-webfont.ttf') format('truetype'),
+		 url('static_root/fonts/opensans-extrabold-webfont.svg#OpenSansExtrabold') format('svg');
+	font-weight: 800;
+	font-style: normal;
+}
+
+/*---------------------------
+  Transitions
+---------------------------*/
+	*, *:link, *:visited, *:hover, *:active, *:focus { transition: background-color 0.1s linear, border-color 0.1s linear, color 0.1s linear, opacity 0.1s linear; }
+		
+/*---------------------------
+  Elements
+---------------------------*/
+	body { background: url(static_root/images/bg_pattern.png) repeat center top; font-family: 'OpenSans', sans-serif; overflow-x: hidden; overflow-y: scroll; }
+	body * { word-wrap: break-word; } /* Webkit Text Wrap Fix */
+	
+	h1, h2, h3, h4, h5, h6 { color: #222; font-family: 'OpenSans', sans-serif; }
+	h1 { font-size: 54px; font-weight: 800; line-height: 1.1; margin: 0 0 5%; }
+	h2 { font-size: 34px; font-weight: 800; line-height: 1.1; margin: 0 0 3%; }
+	h3 { font-size: 28px; font-weight: 800; margin: 0 0 10px; }
+	h4 { font-size: 18px; font-weight: 800; margin: 0 0 10px; }
+	h5 { }
+	h6 { font-size: 14px; text-transform: uppercase; }
+	
+	h1 a, h2 a { color: #222; }
+	
+	a { color: #222; text-decoration: none; }
+	a:hover { }
+	em { font-style: italic; }
+	strong { }
+	p { color: #222; font-family: 'GentiumBookBasic', serif; font-size: 15px; line-height: 1.5; margin: 0 0 3%; }
+	
+	hr { border: 1px solid #222; border-width: 1px 0; padding-top: 1px; }
+	hr.short { clear: both; float: left; width: 300px; }
+	
+	input, textarea { font-family: 'OpenSans', sans-serif; font-size: 12px; line-height: 1.3; }
+	
+/*-------------------------------------------
+  Global
+-------------------------------------------*/
+	.left { float: left; }
+	.block_left { float: left; margin: 0 20px 20px 0; }
+	.right { float: right; }
+	.block_right { float: right; margin: 0 0 20px 20px; }
+	.center { text-align: center; }
+	.clear { clear: both; }
+	.contain { overflow: hidden; }
+	.container { margin-left: auto; margin-right: auto; overflow: hidden; padding: 0 25px; width: 960px; }
+	
+	.more { border-bottom: 1px dotted #ccc; color: #999; font-family: 'OpenSans', sans-serif; font-size: 10px; line-height: 1.4; text-transform: uppercase; }
+	.more:hover { border-color: #222; color: #222; }
+		
+/*-------------------------------------------
+  Structure
+-------------------------------------------*/
+	#header { background: rgba(0, 0, 0, 0.8); height: 60px; left: 0; position: fixed; top: 0; width: 100%; z-index: 100; }
+	#header .branding { color: #fff; display: block; float: left; font-family: 'OpenSans', sans-serif; font-size: 24px; font-weight: 800; line-height: 56px; text-transform: uppercase; }
+	#header nav { float: right; padding: 22px 0 0; }
+	#header nav a { border-bottom: 1px dotted transparent; color: #fff; display: block; float: left; font-family: 'OpenSans', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.05em; line-height: 1.2; margin: 0 0 0 30px; padding: 0 0 8px; text-transform: uppercase; }
+	#header nav a:hover, #header nav a.active { border-color: #fff; }
+	.bigtree_bar_open #header { top: 40px; }
+	
+	#footer { background: #F9F9F9; }
+	#footer .row_12 { padding: 3% 0; }
+	#footer h6 { font-weight: bold; margin: 5% 0; }
+	#footer p { font-size: 13px; margin-top: 3%; }
+	#footer img { margin: 5% 5% 0 0; max-width: 100%; }
+	#footer .address p { color: #666; font-family: 'OpenSans', sans-serif; font-size: 12px; margin-bottom: 2px; }
+	#footer .address a { color: #666; }
+	#footer .address a:hover { color: #222; }
+	#footer .about a { border-bottom: 1px dotted #ccc; color: #666; }
+	#footer .about a:hover { border-color: #222; color: #222; }
+	#footer .social p { line-height: 20px; margin-top: 22px; }
+	#footer .social a { background: url(static_root/images/footer-social.png) no-repeat left top; color: #222; display: block; font-family: 'OpenSans', sans-serif; font-size: 11px; margin: 0 0 18px 20px; padding: 0 0 0 25px; text-transform: uppercase; }
+	#footer .social small { color: #999; display: block; font-size: 9px; line-height: 1; }
+	#footer .social .facebook { background-position: 0 0; }
+	#footer .social .twitter { background-position: 0 -30px; }
+	
+	#footer .copyright { border-top: 1px solid #eee; margin: 3% 0 0; text-align: center; }
+	#footer .copyright p { color: #999; font-family: 'OpenSans', sans-serif; font-size: 11px; margin: 26px 0; }
+	
+	/* Homepage Styles */
+
+	#feature { border-bottom: 1px dotted #222; height: 625px; overflow: hidden; position: relative; width: 100%; }
+	#feature .background { background: #222; height: 100%; width: 100%; }
+	#feature .images { left: 50%; position: absolute; top: 0; z-index: 1; }
+	#feature .image { display: none; height: 100%; left: -700px; position: absolute; top: 0; }
+	#feature .image.active { display: block; opacity: 1; }
+	#feature .image img { float: left; }
+	
+	#feature .content { display: none; height: 100%; overflow: visible; position: relative; }
+	#feature .descriptions { background: #222; margin-top: 200px; position: relative; z-index: 3; }
+	#feature .viewport { height: 0px; overflow: hidden; position: relative; width: 100%; }
+	#feature .viewport.animating { transition: height 0.25s ease-out; }
+	#feature .description { left: 100%; opacity: 0; overflow: hidden; padding: 60px 9% 30px; position: absolute; transition: left 0.25s ease-out, opacity 0.25s linear; width: 100%; }
+	#feature .description.active { left: 0; opacity: 1; }
+	#feature .description.before { left: -100%; }
+	#feature .description.after { left: 100%; }
+	#feature .more { border-color: rgba(255, 255, 255, 0.5); color: #fff; display: block; float: left; margin: 20px 0 0; }
+	#feature .description hr { border-color: #fff; margin: 15px 0; width: 40%; }
+	#feature .description h2 { color: #fff; }
+	#feature .description p { color: #fff; margin: 0; }
+	#feature .triggers { left: 9%; position: absolute; top: 28px; z-index: 3; }
+	#feature .triggers span { background: #fff; border-radius: 100%; cursor: pointer; display: block; float: left; height: 10px; margin: 0 5px 0 0; opacity: 0.2; text-indent: -99999px; width: 10px; }
+	#feature .triggers span:hover { opacity: 0.7; }
+	#feature .triggers span.active { opacity: 0.5; }
+	#feature .credit { bottom: 20px; color: #fff; display: none; font-family: 'OpenSans', sans-serif; font-size: 11px; font-style: italic; position: absolute; right: 0; z-index: 2; }
+	#feature .credit.active { display: block; }
+	#feature .credit .credit_label { display: block; }
+	#feature .credit .credit_text { background: rgba(0, 0, 0, 0.8); color: #fff; display: none; font-family: 'OpenSans', sans-serif; font-size: 11px; margin: 0 -15px -12px 0; padding: 6px 15px 7px; }
+	#feature .credit:hover .credit_label { display: none; }
+	#feature .credit:hover .credit_text { display: block; }
+	
+	.medium #feature { height: 465px; }
+	.small #feature { height: 310px; }
+	
+	.large #feature .image { left: -500px; }
+	.medium #feature .image { left: -375px; }
+	.small #feature .image { left: -250px; }
+
+	.home_callouts { margin: 6% 0 0 0; }
+	
+	/* Twitter Callout */
+
+	.twitter_timeline { -webkit-tap-highlight-color: rgba(255,255,255,0); position: relative; }
+	.twitter_timeline header { margin: 6% 0 0; }
+	.twitter_timeline h3 { float: left; font-size: 18px; margin: 0 10px 0 0; text-transform: uppercase; }
+	.twitter_timeline p { float: left; }
+	.twitter_timeline p a { border-bottom: 1px dotted #ccc; color: #222; }
+	.twitter_timeline p a:hover { border-color: #222; }
+	.twitter_timeline hr { clear: both; margin: 25px 0 40px; width: 100%; }
+	.twitter_timeline .viewport { height: 200px; overflow: hidden; position: relative; }
+	.twitter_timeline .timeline { left: 0; position: absolute; top: 0; transition: left 0.25s ease-out; width: 10000px; }
+	.twitter_timeline .timeline article { float: left; margin: 0 13px 0 12px; overflow: hidden; width: 275px; }
+	.twitter_timeline .timeline p { font-family: "GentiumBookBasic", serif; font-size: 13px; line-height: 20px; margin-bottom: 24px; }
+	.twitter_timeline .timeline a { border-bottom: 1px dotted #ccc; color: #999; }
+	.twitter_timeline .timeline a:hover { border-color: #222; color: #222; }
+	.twitter_timeline .timeline strong { clear: both; color: #999; display: block; font-family: 'OpenSans', sans-serif; font-size: 10px; text-transform: uppercase; }
+	.twitter_timeline .timeline article:hover { border-color: #222; }
+	.twitter_timeline .timeline article:hover a { color: #222; }
+	.twitter_timeline .timeline article:hover strong { color: #222; }
+	.twitter_timeline .triggers { height: 85%; position: absolute; right: 0; top: 15%; }
+	.twitter_timeline .trigger { background: #222 url(static_root/images/icon_arrows.png) no-repeat left center; cursor: pointer; display: block; height: 40%; text-indent: -99999px; width: 20px; }
+	.twitter_timeline .disabled { background-color: #ccc; }
+	.twitter_timeline .previous { background-position: -20px center; }
+	.twitter_timeline .previous.disabled { background-position: 0 center; }
+	.twitter_timeline .next { background-position: -60px center; }
+	.twitter_timeline .next.disabled { background-position: -40px center; }
+
+	.sidebar .twitter_timeline .timeline { position: static; width: 100%; }
+	.sidebar .twitter_timeline .timeline .tweet { border-bottom: 1px dotted #AAA; margin: 0 0 15px 0; padding: 0 0 15px 0; width: 100%; }
+	.sidebar .twitter_timeline hr { margin: 20px 0; }
+	.sidebar .twitter_timeline .triggers { display: none; }
+	.sidebar .twitter_timeline p, .sidebar .twitter_timeline h3 { float: none; }
+	.sidebar .twitter_timeline h3 { margin: 0 0 10px 0; }
+	.sidebar .twitter_timeline header { margin: 0; }
+	.sidebar .twitter_timeline .viewport { height: auto; }
+	.sidebar .twitter_timeline .timeline p { margin: 0 0 10px 0; }
+	
+	/* Flexible Callout */
+
+	.callout { background: #F9F9F9; margin: 0 0 20px 0; padding: 20px; }
+	.callout p { font-size: 12px; }
+	.callout img { margin: 0 0 10px 0; max-width: 100%; }
+	.callout .more { color: #222; font-size: 11px; }
+	.callout .more:hover { border-color: #000; color: #000; }
+	.callout figcaption { display: block; font-family: 'OpenSans', sans-serif; font-size: 11px; font-style: italic; line-height: 1.2; margin: 5px 0 0; }
+
+	.home_callouts .callout { padding: 2.5%; }
+	.home_callouts .callout figure { float: left; margin: 0 3% 0 0; width: 40%; }
+	.home_callouts .callout h4 { font-size: 34px; margin: 0 3% 2% 0; }
+	.home_callouts .callout p { font-size: 15px; margin: 0 3% 2% 0; }
+	.home_callouts .callout img { margin: 0; }
+	.home_callouts .callout .more { font-size: 10px; }
+
+	/* Sub Page Styles */
+
+	#subpage { margin: 130px auto 50px; }
+	.split { width: 49%; }
+
+	.content { padding-left: 20px; }
+	.content a { border-bottom: 1px dotted #999; }
+	.content a:hover { border-color: #222; }
+	.content figure { float: right; margin: 0 0 20px 20px; width: 300px; }
+	.content figure img { width: 100%; }
+	.content figcaption { display: block; font-family: 'OpenSans', sans-serif; font-size: 11px; font-style: italic; line-height: 1.2; margin: 5px 0 0; }
+
+	.subnav { font-weight: 600; }
+	.subnav ul { margin: 0 0 20px; }
+	.subnav ul ul { clear: both; margin: 0 0 0 6%; }
+	.subnav li { border-bottom: 1px dotted #222; color: #222; display: block; overflow: hidden; padding: 7% 0; }
+	.subnav .last { border: none; }
+	.subnav a { display: block; float: left; font-size: 12px; letter-spacing: 0.05em; padding: 2% 5%; }
+	.subnav a.active { background: #222; color: #fff; }
+	.subnav strong, .subnav a.nav_label { background: #F9F9F9; color: #222; display: block; font-size: 16px; line-height: 1; margin: 0 -5% 3%; padding: 8% 5%; text-transform: uppercase; width: 110%; }
+	.subnav a.nav_label { display: none; }
+	
+	/* Blog Styles */
+
+	.blog .content { padding: 0; }
+	.blog h1 { margin: 0 0 3%; }
+	.blog h2 { margin: 0 0 2%; }
+	.blog h3 { color: #999; font-size: 20px; margin: 0 0 6%; text-transform: uppercase; }
+	.blog h1 a, .blog h2 a { border-color: transparent; }
+	.blog h1 a:hover, .blog h2 a:hover { border-color: #999; }
+	
+	.blog .author_bio { background: #F9F9F9; margin: 0 0 5%; padding: 3%; }
+	.blog .author_bio h4 { font-size: 23px; }
+	.blog .author_bio p { font-size: 13px; }
+	
+	.blog .post { border-bottom: 1px dotted #222; margin-bottom: 5%; }
+	.blog .post .meta { font-family: 'OpenSans', sans-serif; font-size: 16px; margin: 0 0 3%; }
+	.blog .post .meta a { border-bottom: 1px dotted #999; color: #222; font-style: italic; }
+	.blog .post .meta a:hover { border-color: #222; }
+	.blog .post .image { display: block; float: right; margin: 0 0 3% 3%; }
+	.blog .post .caption { color: #666; font-family: 'OpenSans', sans-serif; font-size: 11px; font-style: italic; margin: 5px 0 0; text-align: right; }
+	.blog .post .author_info { background: #F9F9F9; margin: 3% 0; overflow: hidden; padding: 3%; }
+	.blog .post .author_info img { display: block; float: left; margin: 0 15px 0 0; }
+	.blog .post .author_info { color: #1F1F1F; font-family: 'OpenSans', sans-serif; font-size: 12px; }
+	.blog .post .author_info a { border: none; }
+	.blog .post .author_info strong { display: block; font-size: 14px; font-weight: 600; margin: 12px 0 7px; }
+	.blog .post .sharing { margin-top: 17px; }
+	.blog .post .sharing a { border: none; }
+	.blog .post .links { margin-bottom: 6%; }
+	.blog .post .links a { margin: 0 15px 0 0; }
+	.blog .post .comments { margin-bottom: 3%; margin-top: 3%; }
+	.blog .post .disqus_notice { font-size: 16px; }
+	.blog .last_post { border-bottom: none; margin-bottom: 0; }
+	
+	.blog .post_page { border: none; margin-bottom: 0; margin-top: 0; }
+	.blog .post_page .meta { margin-bottom: 6%; }
+	
+	.blog .dogwood_newer_posts { float: left; }
+	.blog .dogwood_older_posts { float: right; }
+	.blog .dogwood_search .query { margin: 2% 1% 2% 5%; width: 66.4%; }
+	.blog .dogwood_search .submit { margin: 2% 5% 2% 0; width: 20%; }
+	
+	/* Responsive Styles */
+
+	@media screen and (min-width: 1220px) {
+		#feature .descriptions { width: 31.25%; }
+		#feature .description { padding: 50px 8% 30px; }
+		#feature .triggers { left: 8%; }
+	}
+	
+	@media screen and (max-width: 1220px) {
+		#feature .descriptions { width: 39.5833333333333333%; }
+		#feature .description { padding: 50px 8% 30px; }
+		#feature .triggers { left: 8%; }
+		
+		.twitter_timeline .timeline article { margin: 0 10px; width: 220px; }
+	}
+	
+	@media screen and (max-width: 980px) {
+		#header .branding { font-size: 22px; }
+		#header nav a { margin: 0 0 0 20px; }
+		
+		#feature .descriptions { width: 47.9166666666666667%; }
+		
+		.twitter_timeline .timeline article { margin: 0 8px 0 7px; width: 225px; }
+		
+		#footer .cell_3, #footer .cell_4 { margin-left: 1.0416666666666667%; }
+		#footer .address, #footer .social { width: 47.9166666666666667%; }
+		#footer .about { width: 97.9166666666666667%; }
+		#footer .about h6 { margin: 5% 0 3%; }
+	}
+	
+	@media screen and (max-width: 740px) {
+		h1 { font-size: 44px; }
+		
+		#header { height: auto; }
+		#header .cell_5, #header .cell_7 { text-align: center; width: 97.9166666666666667%; }
+		#header .branding { float: none; line-height: 1.4; margin: 10px 0 0; }
+		#header nav { float: none; overflow: hidden; padding: 0 0 12px; text-align: center; }
+		#header nav a { display: inline-block; float: none; margin: 0 10px; padding: 0 0 5px; }
+		
+		#footer .row_12 { padding: 4% 0; }
+		
+		#feature .descriptions { margin-top: 150px; width: 97.9166666666666667%; }
+		#feature .description { padding: 50px 5% 30px; }
+		#feature .triggers { left: 5%; top: 25px; }
+		
+		#feature .credits { position: relative; right: 5px; top: 125px; z-index: 4; }
+		#feature .credit:hover .credit_label { display: block; }
+		#feature .credit:hover .credit_text { display: none; }
+		
+		.home_callouts .callout figure { float: none; margin: 0 0 10px 0; width: 100%; }
+		
+		.twitter_timeline header { margin: 10% 0 0; }
+		.twitter_timeline .timeline article { margin: 0 5px; padding-right: 10px; width: 230px; }
+		
+		
+		#subpage { margin: 120px auto 50px; }
+		#subpage .sidebar { width: 100%; }
+		.sidebar .callouts { display: none; }
+		
+		p { font-size: 13px; }
+		
+		.content article { margin-top: 7%; }
+		.griddle .content.cell_9 { padding: 0; width: 97.9166666666666667%; }
+		
+		.griddle .row_12 .cell_10 { width: 97.9166666666666667%; }
+		
+		.blog .content, .blog .content .cell_11 { width: 97.9166666666666667%; }
+		.blog .author_bio { display: none; }
+		.blog h3 { margin: 7% 0; }
+		.blog .post { margin-bottom: 7%; margin-top: 7%; }
+		.blog .post .meta { font-size: 14px; margin: 5% 0; }
+		.blog .post .image { max-width: 50%; }
+		.blog .post .image img { max-width: 100%; }
+		.blog .post .links { margin-bottom: 7%; }
+		
+		.subnav { margin: 5px 0 0; position: relative; width: 100%; }
+		.subnav .nav_label { display: block; }
+		.subnav .nav_options { background: #fff; box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); display: none; left: 0; max-height: 300px; overflow-y: auto; position: absolute; top: 0; width: 100%; z-index: 10; }
+		.subnav:hover .nav_options { display: block; }
+		.subnav a { width: 100%; }
+		.subnav strong, .subnav a.nav_label { margin: 0; padding: 3% 5%; width: 100%; }
+		.subnav a.nav_label { display: block; }
+		.subnav ul { margin: 0; }
+		.subnav li { padding: 0; }
+	}
+	
+	@media screen and (max-width: 500px) {
+		/* Hide some BigTree Bar Elements */
+		#bigtree_name { display: none; }
+		#bigtree_logout { display: none; }
+		#bigtree_edit_content { display: none; }
+				
+		h1 { font-size: 34px; }
+		h2 { font-size: 28px; }
+		
+		#header nav a { font-size: 10px; margin: 0 10px; }
+		
+		#footer .cell_3, #footer .cell_4 { width: 97.9166666666666667%; }
+		#footer .about h6 { margin: 5% 0; }
+		
+		#feature .descriptions { margin-top: 140px; width: 97.9166666666666667%; }
+		#feature .descriptions hr, #feature .descriptions p { display: none; }
+		#feature .description { padding: 40px 5% 20px; }
+		#feature .more { margin: 5px 0 0; }
+		#feature .triggers { top: 18px; }
+		
+		#feature .next, #feature .previous { top: 0; }
+
+		.home_callouts .callout h4 { font-size: 24px; }
+		
+		.twitter_timeline .timeline article { margin: 0 4px 0 3px; padding-right: 15px; width: 294px; }
+		.twitter_timeline p { width: 80%; }
+		
+		#subpage { margin: 100px auto 50px; }
+		.content figure { float: none; margin: 0 0 20px 0; width: 100%; }
+		
+		.blog .post { margin-bottom: 10%; }
+		.blog .post .image { float: left; margin: 5% 0; max-width: 100%; }
+		.blog .post .links { margin-bottom: 10%; }
+		
+		.split { width: 100%; }
+		.addthis_toolbox { float: left; }
+	}
+	
+	/* Hi-Res Display Assets */
+	@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
+		
+		#footer .social .facebook { background: url(static_root/images/footer-facebook-hi-res.png) no-repeat; background-size: 16px 16px; }
+		#footer .social .twitter { background: url(static_root/images/footer-twitter-hi-res.png) no-repeat; background-size: 16px 16px; }
+
+	}
