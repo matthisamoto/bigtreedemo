@@ -4406,15 +4406,17 @@
 				false if login failed, otherwise redirects back to the page the person requested.
 		*/
 
-		function loginWithGoogle($email,$password,$stay_logged_in = false) {
+		function loginWithGoogle($email,$stay_logged_in = false) {
 			global $path;
 			$f = sqlfetch(sqlquery("SELECT * FROM bigtree_users WHERE email = '".sqlescape($email)."'"));
-			$phpass = new PasswordHash($bigtree["config"]["password_depth"], TRUE);
-			$ok = $phpass->CheckPassword($password,$f["password"]);
-			if ($ok) {
+			
+			// $phpass = new PasswordHash($bigtree["config"]["password_depth"], TRUE);
+			// $ok = $phpass->CheckPassword($password,$f["password"]);
+			
+			if ($f) {
 				if ($stay_logged_in) {
 					setcookie('bigtree_admin[email]',$f["email"],time()+31*60*60*24,str_replace(DOMAIN,"",WWW_ROOT));
-					setcookie('bigtree_admin[password]',$f["password"],time()+31*60*60*24,str_replace(DOMAIN,"",WWW_ROOT));
+					// setcookie('bigtree_admin[password]',$f["password"],time()+31*60*60*24,str_replace(DOMAIN,"",WWW_ROOT));
 				}
 
 				$_SESSION["bigtree_admin"]["id"] = $f["id"];

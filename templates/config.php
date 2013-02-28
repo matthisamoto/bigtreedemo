@@ -23,10 +23,10 @@
 	
 	// Setup the www_root and resource_root
 	// Resource root must be on a different domain than www_root.  Usually we just remove the www. from the domain.
-	$bigtree["config"]["domain"] = "http://google.bully";
-	$bigtree["config"]["www_root"] = "http://google.bully/";
-	$bigtree["config"]["static_root"] = "http://google.bully/";
-	$bigtree["config"]["admin_root"] = "http://google.bully/admin/";
+	$bigtree["config"]["domain"] = "http://localhost";
+	$bigtree["config"]["www_root"] = "http://localhost/";
+	$bigtree["config"]["static_root"] = "http://localhost/";
+	$bigtree["config"]["admin_root"] = "http://localhost/admin/";
 	
 	// Current Environment
 	$bigtree["config"]["environment"] = ""; // "dev" or "live"; empty to hide

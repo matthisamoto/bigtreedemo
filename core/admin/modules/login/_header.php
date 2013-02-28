@@ -2,7 +2,7 @@
 	$site = $cms->getPage(0);
 	$bigtree["layout"] = "login";
 	
-	$mroot = ADMIN_ROOT."dashboard/vitals-statistics/analytics/";
+	$mroot = ADMIN_ROOT."login/";
 	
 	// Check if we're forcing HTTPS
 	if ($bigtree["config"]["force_secure_login"] && $_SERVER["SERVER_PORT"] == 80) {
