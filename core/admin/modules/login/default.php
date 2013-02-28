@@ -43,7 +43,7 @@
 <form method="post" action="<?=$mroot?>set-token/" class="module" style="margin-top: 30px;">
 	<? if ($google_failure) { ?><p class="error_message clear">There is no account associated with your Google email address</p><? } ?>
 	<fieldset style="margin-top: 0;">
-		<label>Sign in with your <img src="<?=WWW_ROOT?>images/google-logo.png" alt="Google"/> account</label>
+		<label>Sign in with your <img src="<?=ADMIN_ROOT?>images/google-logo.png" alt="Google"/> account</label>
 	</fieldset>
 	<fieldset class="lower" style="margin-top: 0;">
 		<a href="<?=$authenticate->Client->createAuthUrl()?>" class="button blue" id="google_button">Authenticate</a>
